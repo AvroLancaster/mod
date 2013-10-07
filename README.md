@@ -11,20 +11,22 @@ Roman Culture now has access to a unique building
 
 
 **Events**
+*Implemented but not functional*
 Neo-Gaul - a non Breton Celtic culture should become Neo-Gaul if occupying a Latin or Germanic cultured province within France, Aquitaine or Celtiberia. Both the culture and character flip (like Norman) MTTH 2400 months
+*Implemented but not functional*
 
-Sicily - Norman style, but for latin group ([Italo-?]Sicilian from Italian or Norman) and Byzantine group (Greco-Sicilian) from Greek.  Only triggers in Sicily MTTH 2400 months
+Sicily - Norman style, but for Italian/Occitan/Roman (Italo-Sicilian) Byzantine (Greco-Sicilian) MTTH 2400 months
 
-Roman Culture - the Emperor of Rome should have his culture flip to Roman as long as his capital is Roma. Have the event's option read "I am a true Roman." MTTH 60 months
+Roman Culture - the Emperor of Rome should have his culture flip to Roman as long as his capital is Roma. Have the event's option read "I [i]am[/i] a true Roman." MTTH 60 months
 
 Titular Title of "Empire of Conquest" - 
 If this title doesn't exist, and a character is brave, proud, greedy, not lowborn, and has no emperor level titles, they can be hit by this rare event. The name is dynasty based (like Muslim/Zoroastrian rulers) and grants an invasion CB on all titles held by anyone. MTTH 2400 months (half for pagans). There's also a twin event to destroy the title if its holder is not brave, proud or greedy, MTTH 12 months for second event
 
 **Norse culture**
 The Nose culture should have events that make it flip (like the Normans) for many cultures
--All Celtic populations should flip to Norse-Gaels
--West Germanic should flip to Anglo-Norse (MTTH 2400 months)
--Anglo-Saxon/Anglo-Norse should flip Scottish provinces to “Scots” (West Germanic Group) (MTTH 1200)
+-All Celtic populations should flip to Norse-Gaels (MTTH 1200)
+-West Germanic should flip to Anglo-Norse (MTTH 2400)
+-Anglo-Saxon/Anglo-Norse should flip Scottish provinces to Scots (West Germanic group) (MTTH 1200)
 
 
 **Samaritans**
@@ -33,6 +35,14 @@ As a pagan of any kind, there will be a small chance of getting an event that wi
 NOTE: The Samaritans were Babylonian Pagans who were settled in Judea, when they suffered natural disasters and crop failures, the Babylonian Crown told them the solution was to adopt the gods of the region they settled, thus adopting a pagan-Jew hybrid faith.
 
 All "Samaritan" Heresies should be unique to the monotheistic religion and not to the pagan religion. All should have the ability to found religious heads (like Zoroastrians). All "Samaritan" cultures should be linked to the pagan faith they came from (pagan religions are ethnically linked anyway).
+
++++Names for Samaritan Religions
+*Jesusite (Catholic Heresy) Jesus is the only God (though still Trinitarian) but there are several lesser deities which rule various animistic divine realms as dukes to Christ's kingship. (Can create "Pope of Jesus," faith holds their version of the Blot including human sacrifice, and their pope calls crusades)
+*Pantheon of Christ (Orthodox Heresy) Christ is of one body with two natures, a divine and a human one, but they reject the idea of the Trinity in favour of the idea of a multitude of different forms of the one God, which are themselves gods, a "Pantheon of One." (Patriarch system like Orthodox with the ability to create their own Ecumenical Patriarch, and they have a permanent casus belli against all other Christian faiths as well as heathens so long as their ecumenical patriarch exists, but have no access to Holy War CB unless the EP exists)
+*Alexandrism (Miaphysite heresy) Christ is of one body and one nature, but that nature is both fully divine and fully human. However, there are other people who had dual human/divine natures, although nobody other than Christ was fully divine.  Other divine humans include John the Baptist, all the apostles,  several other early Christians and many Christianised pagan deities. Alexandrists believe that devout faithful can become "touched" by this divine nature and become partially divine themselves. (Can create an Alexandrist Pope of Alexandria, and very pious individuals can ask this pope to be declared of a "Touched Nature," which grants a trait that gives +30 relations to all other Alexandrists.  Alexandrists can declare Holy Wars, but their pope calls no crusades)
+*Hadithi (Sunni Heresy) "There is no god *above* Allah, and Mohammed is his messenger" is the declaration of faith for Hadithis. They worship several minor gods below their principle Abrahmic God. They are known as Hadithi from their reliance on hadiths as their primary source of jurisprudence, of which they have 514 (404 not found in any other Islamic denominations). (Regular Islamic gameplay rules. In addition they may create the Hadithi Caliph. Caliph is unlanded, unlandable and must be castrated. Succession, however, is set by the Caliph's de jure liege, the count of Mecca, as if it was a free investiture Catholic bishopric, only castrated Hadithi men are eligible.  Hadithi have the intrigue ability to castrate themselves, Hadithis view castrated individuals as being +25, with "church view on Castrated" being an additional +25. AI should be set to self-castrate if dynasty decadence is above 50%)
+*Azizism (Shia Heresy) Followers of the "13 Imam" Aziz Aziz, Azizists believe that Allah is divided into many divine beings, many of whom walk the earth. Additionally, Azizists believe that Allah is only present in Azizists, and that all non-Azizists are possessed by demons, that Azizists need not obey the laws of non-Azizists, including marital laws. (Azizists follow normal Muslim rules, except are unable to marry non-Azizists, have a -100 penalty to relations with non-Azizist lieges, and can ceremonially rape female prisoners over the age of 14 to impregnate them. Children born this way have the "child of Aziz" trait which acts like Child of Concubine, they can also choose to freely castrate their male children until the age of 14 if they deem them unworthy)
+*Mithraic Zoroastrianism (Zoroastrian Heresy) Mithra has been elevated to the level of Ahura-Mazda, and several other gods are worshipped below them. (All the same rules as Zoroastrianism except there's no option for Shaosaynt. Mithraic Zoroastrians can gain a handful of martial traits from intrigue decisions, and view lieges with martial career paths favourably)
 
 **Resurrecting Religions**
 As a pagan of any kind, there will be a very small chance to be given the option of resurrecting a pagan pantheon that was native to each de jure kingdom, if the character's capital lies within the kingdom and the pagan faith does not exist.
