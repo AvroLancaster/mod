@@ -1,0 +1,43 @@
+# Province adopts Neo-Gaul culture
+namespace = CK2RPG
+province_event = {
+	id = CK2RPG.0
+	desc = "EVTDESC_NEOGAULFLIP"
+	picture = GFX_evt_throne_room
+	
+	trigger = {
+		OR = {
+			culture_group = central_germanic
+			culture_group = latin
+		}
+		OR = {
+			kingdom = { title = k_france }
+			kingdom = { title = k_aquitaine }
+			kingdom = { title = k_aragon }
+			duchy = { title = d_castilla }
+			duchy = { title = d_toledo }
+		}
+		owner = {
+			top_liege = { culture_group = celtic }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2400
+		}
+
+	option = {
+		name = "EVTOPTA_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = neo-gaul }
+			}
+		}
+		culture = neo-gaul
+	}
+	option = {
+		name = "EVTOPTB_NEOGAULFLIP"
+		owner = { culture = neo-gaul }
+		culture = neo-gaul
+	}
+}

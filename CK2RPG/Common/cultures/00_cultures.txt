@@ -795,6 +795,44 @@ byzantine = {
 celtic = {
 	graphical_culture = westerngfx
 
+	Neo-Gaul = {
+		graphical_culture = westerngfx
+		
+		color = { 0.3 0.9 0.7 }
+
+		male_names = {
+			Abaris Acco Acichorius Adiatuanos_Adrian Ambicatus Ambiorix Andecombogius_Andrew Aneroestes Antaros_Anthony Apotourus Atis_Adam Bathanattus Bellovesus
+			Bituitis Boduognatus Boiorix Bolgius Brancus Brennus Britomarus Caburus Cambaules Camulogenus Catamantaloedis Catugnatus Catuvolcus Cauros_Charles
+			Cavarillus Celtillus Cerethrius Ciderius Cincibilus Cingetorix Claodicus Comantorius Concolitanus Conconnetodumnus Connus Convictolitavis Corsignatus
+			Cotos Critognatus Crixus_Christopher Divico Divitiacus Drappes Ducarius Dumnacus Dumnorix Dumnotaurus Duratius Elitovius Eporedorix Gaesorix Galatos 
+			Galba Gobannitius Gutuater Helicon Iccius Indutiomarus Korisus Litaviccus Louernius Lucterius Magalus Moenicoeptus Molistomus Moritasgus Nammeius 
+			Nannus Ollovico Orgetorix Piso Paris_Paris Rufus Sedullus Sigovesus Surus Tasgetius Teutobodunus Teutomatus Valetiacus Vercassivellaunus Vercingetorix Vertico 
+			Vertiscus Verucloetius Viridovix Viridomarus Vismarus Voccio Áed_Hugh Domnall_Donald Gilla-Brígte_Gilbert Ruaidrí_Roderick Iacob_Jacob Colin_Nicholas
+			Gilbert_Gilbert Gilpatrick_Gilpatrick Patrick_Patrick Alan_Alan Alisander Ynyr Owain Padern Padrig_Patrick Arzhur_Arthur Baldoen_Baldwin Arc'hantael 
+			Karlz_Charles Erwan_Yves Adam_Adam Adolf Albrecht_Albert Welf Wenzel_Vaclav Antoine_Antoninus Archambaud_Archibald Arnaud_Arnold Lothaire_Lothar Louis_Louis
+		}
+		female_names = {
+			Eponina Boudicca Cartimandua Keyne Iseult Ygern Branwen Enid Rhiannon Paris_Paris Corisande Galiena Gallia Cacht Éua_Eva Caitilín_Catherine Lucia_Lucia 
+			Máire_Maria Bethoc_Beatrice Bride_Brigid Galiena Gormelia_Gormflaith Alice_Alice Cristin_Christina Delyth Denis Gwen Sioned_Joan Youenna_Joan Ysabelle_Elisabeth
+			Elen_Helen Elena_Elaine Elesbed_Elisabeth Judith_Judith Jutte Katharina_Catherine Adelheid_Adelaide Adelinde Emma_Emma Ermengarde_Ermengarde Ermessinde_Ermesinda 
+			Esclarmonde_Esclarmunda Euphrosine_Euphrosyne Eustachie Eve_Eva
+		}
+		
+		dukes_called_kings = yes
+		
+		from_dynasty_prefix = "de "
+		grammar_transform = french
+
+		modifier = default_culture_modifier
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+	}
+	
 	irish = {
 		graphical_culture = celticgfx
 		
