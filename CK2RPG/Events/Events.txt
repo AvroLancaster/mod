@@ -23,6 +23,104 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
+		Months = 2400
+		}
+
+	option = {
+		name = "EVTOPTA_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = Neo-Gaul }
+			}
+		}
+		culture = Neo-Gaul
+	}
+	option = {
+		name = "EVTOPTB_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = Neo-Gaul }
+			}
+		}
+		owner = { culture = Neo-Gaul }
+		culture = Neo-Gaul
+	}
+	option = {
+		name = "EVTOPTC_NEOGAULFLIP"
+		trigger = {
+				owner = { culture = Neo-Gaul }
+			}
+			culture = Neo-Gaul
+		}
+}
+#Province flips to Italo-Sicilian
+province_event = {
+	id = CK2RPG.1
+	desc = "EVTDESC_ITALOSICILIANFLIP"
+	picture = GFX_evt_throne_room
+	
+	trigger = {
+		kingdom = { title = k_sicily }
+		owner = {
+			top_liege = { 
+			OR = { 
+			culture = italian
+			culture = occitan
+			culture = roman
+			}
+		}
+	}
+	}
+	
+	mean_time_to_happen = {
+		Months = 2400
+		}
+
+	option = {
+		name = "EVTOPTA_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = Italo-Sicilian }
+			}
+		}
+		culture = Italo-Sicilian
+	}
+	option = {
+		name = "EVTOPTB_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = Italo-Sicilian }
+			}
+		}
+		owner = { culture = Italo-Sicilian }
+		culture = Italo-Sicilian
+	}
+	option = {
+		name = "EVTOPTC_NEOGAULFLIP"
+		trigger = {
+				owner = { culture = Italo-Sicilian }
+			}
+			culture = Italo-Sicilian
+		}
+}
+#Province flips to Graeco-Sicilian
+province_event = {
+	id = CK2RPG.2
+	desc = "EVTDESC_GRAECOSICILIANFLIP"
+	picture = GFX_evt_throne_room
+	
+	trigger = {
+		kingdom = { title = k_sicily }
+		owner = {
+			top_liege = { 
+			OR = { 
+			culture = greek
+			}
+		}
+	}
+	}
+	
+	mean_time_to_happen = {
 		months = 2400
 		}
 
@@ -30,14 +128,625 @@ province_event = {
 		name = "EVTOPTA_NEOGAULFLIP"
 		trigger = {
 			NOT = {
-				owner = { culture = neo-gaul }
+				owner = { culture = Graeco-Sicilian }
 			}
 		}
-		culture = neo-gaul
+		culture = Graeco-Sicilian
 	}
 	option = {
 		name = "EVTOPTB_NEOGAULFLIP"
-		owner = { culture = neo-gaul }
-		culture = neo-gaul
+		trigger = {
+			NOT = {
+				owner = { culture = Graeco-Sicilian }
+			}
+		}
+		owner = { culture = Graeco-Sicilian }
+		culture = Graeco-Sicilian
+	}
+	option = {
+		name = "EVTOPTC_NEOGAULFLIP"
+		trigger = {
+				owner = { culture = Graeco-Sicilian }
+			}
+			culture = Graeco-Sicilian
+		}
+		}
+#Roman Emperor becomes Roman
+character_event = {
+	id = CK2RPG.3
+	desc = "EVTDESC_ROMANFLIP"
+	picture = GFX_evt_lunatic
+	
+	min_age = 20
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		has_landed_title = e_roman_empire
+		trait = proud
+		capital_scope = { province_id = 333 }
+		NOT = {
+				owner = { culture = roman }
+			}
+			}
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.20
+			trait = lunatic
+		}
+		modifier = {
+			factor = 0.20
+			trait = possessed
+		}
+		modifier = {
+			factor = 5
+			trait = slothful
+		}
+		modifier = {
+			factor = 5
+			trait = content
+		}
+		}
+	option = {
+		name = "EVTOPTA_ROMANFLIP"
+		culture = roman
 	}
 }
+# A Roman again rules Rome
+province_event = {
+	id = CK2RPG.4
+	desc = "EVTDESC_ROMAROMANFLIP"
+	picture = GFX_evt_throne_room
+	
+	trigger = {
+	province_id = 333
+		NOT = {
+			culture = roman
+		}
+		owner = {
+			top_liege = { culture = roman }
+		}
+	}
+	
+	mean_time_to_happen = {
+		Months = 12
+		}
+
+	option = {
+		name = "EVTOPTA_ROMAROMANFLIP"
+		culture = roman
+	}
+}
+
+# The Empire of Conquest is given away
+character_event = {
+	id = CK2RPG.5
+	desc = "EVTDESC_EMPIRECONQUEST"
+	picture = GFX_evt_throne_room
+	
+	prisoner = no
+	only_independent = yes
+	is_landed = yes
+	
+	trigger = {
+	e_conquest = { has_holder = no }
+	is_landed = yes
+	prisoner = no
+	only_independent = yes
+	NOT = { has_landed_title = e_conquest }
+	trait = proud
+	trait = ambitious
+	trait = greedy
+	trait = brave
+	}
+	
+	mean_time_to_happen = {
+		months = 2400
+		modifier = {
+			factor = 0.20
+			trait = lunatic
+		}
+		modifier = {
+			factor = 0.50
+			trait = possessed
+		}
+		modifier = {
+			factor = 0.90
+			trait = scholar
+		}
+		modifier = {
+			factor = 5
+			trait = slothful
+		}
+		modifier = {
+			factor = 1.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 1.5
+			trait = depressed
+		}
+		}
+
+	option = {
+		name = "EVTOPTA_EMPIRECONQUEST"
+		e_conquest = {
+			grant_title = ROOT }
+	}
+}
+
+# The Empire of Conquest is taken away
+character_event = {
+	id = CK2RPG.6
+	desc = "EVTDESC_NOEMPIRECONQUEST"
+	picture = GFX_evt_throne_room
+	
+	has_landed_title = e_conquest
+	
+	trigger = {
+	has_landed_title = e_conquest
+	OR = { 
+		NOT = {  
+			trait = proud }
+		NOT = {
+			trait = ambitious }
+		NOT = {
+			trait = greedy }
+		NOT = {
+			trait = brave	
+			} 
+	} 
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 2.0
+			trait = proud
+		}
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2.0
+			trait = greedy
+		}
+		modifier = {
+			factor = 2.0
+			trait = brave
+		}
+		}
+
+	option = {
+		name = "EVTOPTA_NOEMPIRECONQUEST"
+		e_conquest = {
+			destroy_landed_title = THIS
+	}
+}
+}
+#Anglo-Norse Flip
+namespace = CK2RPG
+province_event = {
+	id = CK2RPG.7
+	desc = "EVTDESC_ANGLONORSEFLIP"
+	picture = GFX_evt_throne_room
+	
+	trigger = {
+			culture = saxon
+			kingdom = { title = k_england }
+		owner = {
+			top_liege = { culture = norse }
+		}
+	}
+	
+	mean_time_to_happen = {
+		Months = 2400
+		}
+
+	option = {
+		name = "EVTOPTA_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = anglo-norse }
+			}
+		}
+		culture = anglo-norse
+	}
+	option = {
+		name = "EVTOPTB_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = anglo-norse }
+			}
+		}
+		owner = { culture = anglo-norse }
+		culture = anglo-norse
+	}
+	option = {
+		name = "EVTOPTC_NEOGAULFLIP"
+		trigger = {
+				owner = { culture = anglo-norse }
+			}
+			culture = anglo-norse
+		}
+}
+#Norse-Gael Flip
+namespace = CK2RPG
+province_event = {
+	id = CK2RPG.8
+	desc = "EVTDESC_NORSEGAELFLIP"
+	picture = GFX_evt_throne_room
+	
+	trigger = {
+			culture_group = celtic
+		OR = {
+			kingdom = { title = k_ireland }
+			kingdom = { title = k_scotland }
+			kingdom = { title = k_wales }
+			}
+		owner = {
+			top_liege = { culture = norse }
+		}
+	}
+	
+	mean_time_to_happen = {
+		Months = 1200
+		}
+
+	option = {
+		name = "EVTOPTA_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = norse-gael }
+			}
+		}
+		culture = norse-gael
+	}
+	option = {
+		name = "EVTOPTB_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = norse-gael }
+			}
+		}
+		owner = { culture = norse-gael }
+		culture = norse-gael
+	}
+	option = {
+		name = "EVTOPTC_NEOGAULFLIP"
+		trigger = {
+				owner = { culture = norse-gael }
+			}
+			culture = norse-gael
+		}
+}
+#Scots Flip
+namespace = CK2RPG
+province_event = {
+	id = CK2RPG.9
+	desc = "EVTDESC_SCOTSFLIP"
+	picture = GFX_evt_throne_room
+	
+	trigger = {
+			culture = scottish
+		OR = {
+			duchy = { title = d_lancaster }
+			duchy = { title = d_northumberland }
+			duchy = { title = d_lothian }
+			duchy = { title = d_galloway }
+			duchy = { title = d_albany }
+			duchy = { title = d_ulster }
+		}
+		owner = {
+			top_liege = { 
+				OR = { 
+					culture = saxon
+					culture = anglo-norse
+					} 
+				}
+			}
+		}
+	
+	mean_time_to_happen = {
+		Months = 1200
+		}
+
+	option = {
+		name = "EVTOPTA_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = scots }
+			}
+		}
+		culture = scots
+	}
+	option = {
+		name = "EVTOPTB_NEOGAULFLIP"
+		trigger = {
+			NOT = {
+				owner = { culture = scots }
+			}
+		}
+		owner = { culture = scots }
+		culture = scots
+	}
+	option = {
+		name = "EVTOPTC_NEOGAULFLIP"
+		trigger = {
+				owner = { culture = scots }
+			}
+			culture = scots
+		}
+}
+#Jesusite Flip chain one
+province_event = {
+	id = CK2RPG.10
+	desc = "EVTDESC_JESUSITEFLIP1"
+	picture = GFX_evt_library
+	
+	trigger = {
+			religion = catholic
+		owner = {
+			top_liege = { 
+				religion_group = pagan_group
+			}
+		}
+		}
+	
+	mean_time_to_happen = {
+		Months = 9000
+		}
+		option = { 
+		name = "EVTOPTA_JESUSITEFLIP1"
+		owner = {
+				character_event = {
+					id = CK2RPG.11
+					tooltip = EVTTOOLTIPA_JITEFLIP1
+				}
+				}
+		}
+		option = {
+		name = "EVTOPTB_JESUSITEFLIP1"
+		owner = { 
+		random = {
+         chance = 10
+         add_trait = craven
+		 hidden_tooltip = {
+				owner = { character_event = {
+					id = 38257 #Notify craven
+					}
+				}
+				}
+				}
+				}
+				}
+}
+#Jesusite Flip chain two
+character_event = {
+	id = CK2RPG.11
+	desc = "EVTDESC_JESUSITEFLIP2"
+	picture = GFX_evt_library
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = "EVTOPTA_JESUSITEFLIP2"
+		trigger = {
+		NOT = {
+			trait = zealous
+			}
+		}
+		if = {
+			limit = { 
+				ROOT = {
+				OR = {
+					religion = pagan
+					religion = pagan_reformed
+				}
+				}
+				}
+				culture = druidic
+				capital_scope = { culture = druidic }
+			}
+		if = {
+			limit = { 
+				ROOT = {
+				OR = {
+					religion = cpagan
+					religion = cpagan_reformed
+				}
+				}
+				}
+				culture = druidic
+				capital_scope = { culture = druidic }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = norse_pagan
+					religion = norse_pagan_reformed
+				}
+				}
+				}
+				culture = nord
+				capital_scope = { culture = nord }
+			}
+		if = {
+			limit = {
+				ROOT = {
+				OR = {
+					religion = tengri_pagan
+					religion = tengri_pagan_reformed
+				}
+				}
+				}
+				culture = orkhon
+				capital_scope = { culture = orkhon }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = baltic_pagan
+					religion = baltic_pagan_reformed
+				}
+				}
+				}
+				culture = ambrian
+				capital_scope = { culture = ambrian }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = finnish_pagan
+					religion = finnish_pagan_reformed
+				}
+				}
+				}
+				culture = tuonic
+				capital_scope = { culture = tuonic }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = aztec
+					religion = aztec_reformed
+				}
+				}
+				}
+				culture = euro-nahuan
+				capital_scope = { culture = euro-nahuan }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = slavic_pagan
+					religion = slavic_pagan_reformed
+				}
+				}
+				}
+				culture = lechtian
+				capital_scope = { culture = lechtian }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = west_african_pagan
+					religion = west_african_pagan_reformed
+				}
+				}
+				}
+				culture = walata
+				capital_scope = { culture = walata }
+			}
+		if = {
+			limit = { 
+				ROOT = {
+				OR = {
+					religion = hellenic_pagan
+					religion = hellenic_pagan_reformed
+				}
+				}
+				}
+				culture = hellene
+				capital_scope = { culture = hellene }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = germanic_pagan
+					religion = germanic_pagan_reformed
+				}
+				}
+				}
+				culture = allaman
+				capital_scope = { culture = allaman }
+			}
+		if = {
+			limit = { 
+				ROOT = {
+				OR = {
+					religion = babylonian_pagan
+					religion = babylonian_pagan_reformed
+				}
+				}
+				}
+				culture = babilya
+				capital_scope = { culture = babilya }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = phoenician_pagan
+					religion = phoenician_pagan_reformed
+				}
+				}
+				}
+				culture = tyrian
+				capital_scope = { culture = tyrian }
+			}
+		if = {
+			limit = { 
+			ROOT = {
+				OR = {
+					religion = egyptian_pagan
+					religion = egyptian_pagan_reformed
+				}
+				}
+				}
+				culture = masirene
+				capital_scope = { culture = masirene }
+			}
+			religion = jesusite
+			set_parent_religion = { religion = jesusite parent = catholic }
+		}
+	option = {
+		name = "EVTOPTB_JESUSITEFLIP2"
+				}
+	option = {
+		name = "EVTOPTC_JESUSITEFLIP2"
+		trigger ={
+				OR = {
+					trait = wroth
+					trait = cruel
+		}
+		}
+		random_list = {
+				50 = {
+					add_trait = wroth
+					character_event = {
+					id = 38254 #Notify wroth
+					}
+				}
+				50 ={
+					add_trait = cruel
+					character_event = {
+					id = 38259 #Notify cruel
+				}
+				}
+				}
+}
+}
+
+#unburned test
+character_event = {
+	id = CK2RPG.12
+	desc = "TEST"
+	picture = GFX_evt_library
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = "TEST"
+		 add_trait = unburned
+		 }
+		 }

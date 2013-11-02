@@ -1,0 +1,12 @@
+
+unburned = { 
+	potential = {
+		religion = jesusite
+		age = 16
+	}
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.1
+	sex_appeal_opinion = -10
+	church_opinion = 20
+	same_opinion = 50
+	}

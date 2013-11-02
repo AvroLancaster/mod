@@ -65,6 +65,7 @@ RETTYPE_CUL_ENG =
 	
 	culture = english
 	culture = welsh
+	culture = Neo-Gaul
 	
 	modifier = {
 		archers_offensive = 0.6
@@ -77,6 +78,8 @@ RETTYPE_CUL_SCOT =
 	first_amount = 500
 	
 	culture = scottish
+	culture = Neo-Gaul
+	culture = scots
 	
 	modifier = {
 		pikemen_defensive = 0.6
@@ -126,6 +129,7 @@ RETTYPE_CUL_FRANK_NOR_GER =
 	culture = norman
 	culture = german
 	culture = breton
+	culture = Neo-Gaul
 	
 	modifier = {
 		knights_offensive = 0.6
@@ -200,6 +204,7 @@ RETTYPE_CUL_ARAB =
 	first_amount = 500
 	
 	culture_group = arabic
+	culture = masirene
 	
 	modifier = {
 		light_cavalry_defensive = 0.6
@@ -228,6 +233,8 @@ RETTYPE_CUL_IRISH =
 	first_amount = 500
 	
 	culture = irish
+	culture = Neo-Gaul
+	culture = norse-gael
 	
 	modifier = {
 		heavy_infantry_defensive = 0.6
@@ -301,6 +308,7 @@ RETTYPE_CUL_NAHUA =
 	second_amount = 250
 	
 	culture = nahuatl
+	culture = euro-nahuan
 	
 	modifier = {
 		light_infantry_offensive = 0.3
@@ -315,9 +323,36 @@ RETTYPE_CUL_ROMAN =
 	first_type = 1
 	first_amount = 500
 	
-	culture = Roman
+	culture = roman
 	
 	modifier = {
 		heavy_infantry_morale = 0.6
+	}
+}
+
+RETTYPE_CUL_ITALOSICILIAN = 
+{
+	first_type = 4
+	first_amount = 200
+	second_type = 2
+	second_amount = 300
+	
+	culture = Italo-Sicilian
+	
+	modifier = {
+		pikemen_morale = 0.3
+		knights_offensive = 0.3
+	}
+}
+
+RETTYPE_CUL_DRUIDIC = 
+{
+	first_type = 0
+	first_amount = 500
+	
+	culture = druidic
+	
+	modifier = {
+		light_infantry_offensive = 0.6
 	}
 }

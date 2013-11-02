@@ -1,0 +1,22 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_religion_icon_strip"
+		texturefile = "gfx\\interface\\religion_icon_strip.tga"
+		noOfFrames = 56
+	}
+	spriteType = {
+		name = "GFX_religion_icon_strip_small"
+		texturefile = "gfx\\interface\\religion_icon_strip_small.tga"
+		noOfFrames = 56
+	
+	}
+	spriteType = {
+ name = "GFX_trait_unburned"
+ texturefile = "gfx/traits/unburned.tga"
+ noOfFrames = 1
+ norefcount = yes
+ effectFile = "gfx/FX/buttonstate.lua"
+ 
+ }
+	

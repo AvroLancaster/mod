@@ -1,0 +1,97 @@
+decisions = {
+	hold_jesusite_blot = {
+		is_high_prio = yes
+		potential = {
+			has_dlc = "The Old Gods"
+			is_ruler = yes
+			age = 16
+			prisoner = no
+			religion = jesusite
+			has_character_flag = tournament_has_ended
+			NOT = { has_character_modifier = held_blot_timerj }
+			NOT = {	has_character_flag = holding_blotj }
+		}
+		allow = {
+			war = no
+			any_demesne_title = {
+				is_occupied = no
+			}
+			OR = {
+				NOT = { month = 2 }
+				month = 10
+			}
+			scaled_wealth = 0.20
+			prisoner = no
+		}
+		effect = {
+			scaled_wealth = -0.20
+			set_character_flag = holding_blotj
+			custom_tooltip = {
+				text = prepare_blot
+				hidden_tooltip = { 
+					character_event = { id = CK2RPGBLOT.600 } 
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					scaled_wealth = 3.0
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					martial = 8
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { month = 9 }
+
+			}
+		}
+	}
+
+	create_pope_of_jesus = {
+		is_high_prio = yes
+		potential = {
+			religion = jesusite
+			NOT = { has_global_flag = jesusite_pope_created }
+		}
+		allow = {
+			religion = jesusite
+			piety = 900
+			religion_authority = 0.70
+		}
+		effect = {
+			set_global_flag = jesusite_pope_created
+			piety = -900
+			activate_title = { title = k_pope_of_jesus }
+			hidden_tooltip = {
+				create_random_priest = {
+					random_traits = yes
+					religion = jesusite
+					culture = italian
+					dynasty = random
+					female = no
+					age = 41
+				}
+				}
+				}
+				new_character = {
+					k_pope_of_jesus = {
+						grant_title = PREV
+					}
+				}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}
